@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Student.destroy_all
-House.destroy_all
+House.destroy_all # Delete all house and their associated students.
 
 ravenclaw = House.create(name: 'Ravenclaw', points: 0)
 wally = ravenclaw.students.create(name: 'Wally Glutton')
+
+puts "After seeding the database: "
+puts "  - There are #{House.count} houses."
+puts "  - There are #{Student.count} students."
