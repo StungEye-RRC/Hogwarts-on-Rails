@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
 
   # The show action
   def show
+    @student = Student.find(params[:id])
   end
   # Automagically renders the
   # app/views/students/show.html.erb
