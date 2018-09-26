@@ -1,24 +1,7 @@
-# README
+# Hogwarts on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In which we begin to develop a Rails project for keeping track of the students, houses and teachers at the Hogwarts School of Witchcraft and Wizardry.
 
-Things you may want to cover:
+Associated YouTube Screencasts:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Hogwarts on Rails - Part 1](https://youtu.be/pU4eyGz2n4s)
