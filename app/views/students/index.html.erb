@@ -3,7 +3,7 @@
 <ul>
   <% @students.each do |student| %>
     <li>
-      <%= student.name %> of house
+      <%= link_to student.name, student %> of house
       <%= student.house.name %>
     </li>
   <% end %>
