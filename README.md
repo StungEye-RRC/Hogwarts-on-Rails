@@ -6,3 +6,4 @@ Associated YouTube Screencasts:
 
 * [Hogwarts on Rails - Part 1](https://youtu.be/pU4eyGz2n4s) - Sorry, no sound! 😶
 * [Hogwarts on Rails - Part 2](https://youtu.be/FHMy4NUdXhY)
+* Part 3 - Coming Soon!
