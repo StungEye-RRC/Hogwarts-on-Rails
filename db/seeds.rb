@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-House.destroy_all # Delete all house and their associated students.
+Appointment.destroy_all
+House.destroy_all # Delete all houses and their associated students and teachers.
 
 8.times do
   house = House.create(name: Faker::HarryPotter.unique.house,
@@ -18,10 +19,23 @@ House.destroy_all # Delete all house and their associated students.
     house.students.create(name: Faker::Name.unique.name)
   end
 
-  Teacher.create(name: Faker::Name.unique.name, house: house)
+  2.times do
+    Teacher.create(name: Faker::Name.unique.name, house: house)
+  end
+end
+
+10.times do
+  student = Student.all.sample
+  teacher = Teacher.all.sample
+  days_in_the_future = Faker::Number.number(2).to_i
+  date = Faker::Time.forward(days_in_the_future, :morning)
+  Appointment.create(student: student,
+                     teacher: teacher,
+                     meeting_time: date)
 end
 
 puts "After seeding the database: "
 puts "  - There are #{House.count} houses."
 puts "  - There are #{Student.count} students."
 puts "  - There are #{Teacher.count} teachers."
+puts "  - There are #{Appointment.count} appointments."
