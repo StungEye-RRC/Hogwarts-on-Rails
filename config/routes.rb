@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :students, only: [:index, :show]
+  resources :pages, only: [:show]
 
-  get 'best/path/evar/about', to: 'pages#about', as: 'about'
+  get ':permalink', to: 'pages#permalink'
+  get 'static_about', to: 'pages#about', as: 'about'
 
   # RESTful Routing
   # index     GET    /students
