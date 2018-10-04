@@ -11,13 +11,17 @@ House.destroy_all # Delete all house and their associated students.
 8.times do
   house = House.create(name: Faker::HarryPotter.unique.house,
                        points: Faker::Number.number(2))
+
   students_per_house = Faker::Number.number(2).to_i
   puts "Adding #{students_per_house} students to house #{house.name}."
   students_per_house.times do
-    house.students.create(name: Faker::Name.name)
+    house.students.create(name: Faker::Name.unique.name)
   end
+
+  Teacher.create(name: Faker::Name.unique.name, house: house)
 end
 
 puts "After seeding the database: "
 puts "  - There are #{House.count} houses."
 puts "  - There are #{Student.count} students."
+puts "  - There are #{Teacher.count} teachers."
