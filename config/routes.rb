@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :students, only: [:index, :show]
 
+  get 'best/path/evar/about', to: 'pages#about', as: 'about'
+
   # RESTful Routing
   # index     GET    /students
   # show      GET    /students/:id
