@@ -1,0 +1,11 @@
+<h2>Students Found: <%= @students.size %></h2>
+
+<% if @students.empty? %>
+  <p>Sorry, no students found.</p>
+<% else %>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= link_to student.name, student %></li>
+    <% end %>
+  </ul>
+<% end %>
