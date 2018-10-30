@@ -39,3 +39,5 @@ puts "  - There are #{House.count} houses."
 puts "  - There are #{Student.count} students."
 puts "  - There are #{Teacher.count} teachers."
 puts "  - There are #{Appointment.count} appointments."
+
+AdminUser.create!(email: 'admin@example.com', password: 'password!', password_confirmation: 'password!') if Rails.env.development?
